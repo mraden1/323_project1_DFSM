@@ -1,3 +1,7 @@
+import networkx as nx
+import matplotlib as plt
+
+
 
 class deterAutoMach:
     """Builds a deterministic auto machine"""
