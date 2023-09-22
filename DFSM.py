@@ -1,8 +1,3 @@
-import networkx as nx
-import matplotlib as plt
-
-
-
 class deterAutoMach:
     """Builds a deterministic auto machine"""
 
@@ -21,7 +16,7 @@ class deterAutoMach:
 
     def setString(self):
         inp = input(
-            "enter a string of characters from the alphabet terminating with '$'")
+            "Enter a string of characters from the alphabet terminating with '$'")
         self.inpString = inp
 
     def runMachine(self):
@@ -29,7 +24,6 @@ class deterAutoMach:
         self.my_keys = list(self.start_state.trans.keys())
 
         for item in self.inpString:
-            self.start_state.statePrint()
             if self.checkForEnd(item):
                 return self.printResult()
             elif self.checkForValid(item):
